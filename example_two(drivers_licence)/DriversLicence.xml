@@ -6,6 +6,9 @@
     <LastName>Abdelhalim</LastName>
     <BirthDate>12/11/1994</BirthDate>
     <VehiculeType>Car</VehiculeType>
+    <![CDATA[
+        <DateOfIssue>11/06/2016</DateOfIssue>
+    ]]>
     <DateOfIssue>11/06/2016</DateOfIssue>
 <!--    For Citizens it is 4 years and for visa holders it is the visa expiry date. -->
     <ExpirtyDate>11/06/2021</ExpirtyDate>
