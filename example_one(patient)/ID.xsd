@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.example.org/PaymentType"
-        xmlns:tns="http://www.bharatthippireddy.com/Patient"
-        elementFormDefault="qualified">
-    <simpleType name="ID">
+        targetNamespace="http://www.bharatthippireddy.com/Common"
+        xmlns:common="http://www.bharatthippireddy.com/Common"
+        elementFormDefault="qualified" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.bharatthippireddy.com/Common ">
+    <simpleType name="Id">
         <restriction base="int">
             <pattern value="[0-9]*"/>
         </restriction>
