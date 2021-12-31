@@ -7,14 +7,16 @@
     <element name="patient" type="tns:Patient"/>
     <complexType name="Patient">
         <sequence>
-            <element name="id" type="tns:ID"/>
-            <element name="name" type="tns:String15Chars"/>
-            <element name="age" type="int"/>
-            <element name="birthDate" type="date"/>
-            <element name="email" type="string"/>
-            <element name="gender" type="tns:Gender"/>
-            <element name="phone" type="string"/>
-            <element name="payment" type="tns:PaymentType"/>
+            <element name="id" type="tns:ID" minOccurs="1" maxOccurs="1"/>
+            <element name="firstName" type="tns:String15Chars" minOccurs="1" maxOccurs="1"/>
+            <element name="lastName" type="tns:String15Chars" minOccurs="1" maxOccurs="1"/>
+            <element name="age" type="int" minOccurs="1" maxOccurs="1"/>
+            <element name="birthDate" type="date" minOccurs="1" maxOccurs="1"/>
+            <element name="email" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="address" type="string" maxOccurs="unbounded"/>
+            <element name="gender" type="tns:Gender" maxOccurs="1"/>
+            <element name="phone" type="string" minOccurs="1" maxOccurs="1"/>
+            <element name="payment" type="tns:PaymentType" minOccurs="1" maxOccurs="1"/>
         </sequence>
     </complexType>
 

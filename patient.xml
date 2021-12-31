@@ -3,10 +3,12 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.bharatthippireddy.com/Patient patient.xsd">
     <pat:id>3</pat:id>
-    <pat:name>abelhalim</pat:name>
+    <pat:firstName>diab</pat:firstName>
+    <pat:lastName>abdelhalim</pat:lastName>
     <pat:age>3</pat:age>
     <pat:birthDate>2008-09-29</pat:birthDate>
     <pat:email>string</pat:email>
+    <pat:address>Sayeh ABDALLAH STREET</pat:address>
     <pat:gender>Male</pat:gender>
     <pat:phone>string</pat:phone>
     <pat:payment>
