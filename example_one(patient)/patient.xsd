@@ -3,7 +3,7 @@
         xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.bharatthippireddy.com/Patient"
         xmlns:tns="http://www.bharatthippireddy.com/Patient"
-        elementFormDefault="unqualified">
+        elementFormDefault="qualified">
     <element name="patient" type="tns:Patient"/>
     <complexType name="Patient">
         <sequence>
@@ -18,7 +18,7 @@
             <element name="phone" type="string" minOccurs="1" maxOccurs="1"/>
             <element name="payment" type="tns:PaymentType" minOccurs="1" maxOccurs="1"/>
         </sequence>
-        <attribute name="id" type="tns:ID" use="required"/>
+        <attribute name="id" type="int" use="required"/>
     </complexType>
 
     <complexType name="PaymentType">
