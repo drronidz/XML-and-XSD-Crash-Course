@@ -1,20 +1,20 @@
-<pat:patient
+<patient
         xmlns:pat="http://www.bharatthippireddy.com/Patient"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.bharatthippireddy.com/Patient patient.xsd">
-    <pat:id>3</pat:id>
-    <pat:firstName>diab</pat:firstName>
-    <pat:lastName>abdelhalim</pat:lastName>
-    <pat:age>3</pat:age>
-    <pat:birthDate>2008-09-29</pat:birthDate>
-    <pat:email>string</pat:email>
-    <pat:address>Sayeh ABDALLAH STREET</pat:address>
-    <pat:gender>Male</pat:gender>
-    <pat:phone>string</pat:phone>
-    <pat:payment>
-        <pat:insurance>
-            <pat:provider>Axa</pat:provider>
-            <pat:limit>1000</pat:limit>
-        </pat:insurance>
-    </pat:payment>
-</pat:patient>
+    <id>3</id>
+    <firstName>diab</firstName>
+    <lastName>abdelhalim</lastName>
+    <age>3</age>
+    <birthDate>2008-09-29</birthDate>
+    <email>string</email>
+    <address>Sayeh ABDALLAH STREET</address>
+    <gender>Male</gender>
+    <phone>string</phone>
+    <payment>
+        <insurance>
+            <provider>Axa</provider>
+            <limit>1000</limit>
+        </insurance>
+    </payment>
+</patient>

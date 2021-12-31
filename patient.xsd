@@ -3,7 +3,7 @@
         xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.bharatthippireddy.com/Patient"
         xmlns:tns="http://www.bharatthippireddy.com/Patient"
-        elementFormDefault="qualified">
+        elementFormDefault="unqualified">
     <element name="patient" type="tns:Patient"/>
     <complexType name="Patient">
         <sequence>
