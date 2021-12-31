@@ -18,7 +18,7 @@
             <element name="phone" type="string" minOccurs="1" maxOccurs="1"/>
             <element name="payment" type="tns:PaymentType" minOccurs="1" maxOccurs="1"/>
         </sequence>
-        <attribute name="id" type="int" use="required"/>
+        <attribute name="id" type="tns:ID" use="required"/>
     </complexType>
 
     <complexType name="PaymentType">
