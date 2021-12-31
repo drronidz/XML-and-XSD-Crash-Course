@@ -7,13 +7,33 @@
     <element name="patient" type="tns:Patient"/>
     <complexType name="Patient">
         <sequence>
-            <element name="id" type="int"/>
-            <element name="name" type="string"/>
+            <element name="id" type="tns:ID"/>
+            <element name="name" type="tns:String15Chars"/>
             <element name="age" type="int"/>
             <element name="birthDate" type="date"/>
             <element name="email" type="string"/>
-            <element name="gender" type="string"/>
+            <element name="gender" type="tns:Gender"/>
             <element name="phone" type="string"/>
         </sequence>
     </complexType>
+
+    <simpleType name="ID">
+        <restriction base="int">
+            <pattern value="[0-9]*"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="String15Chars">
+        <restriction base="string">
+            <maxLength value="15"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Gender">
+        <restriction base="string">
+            <enumeration value="Male"/>
+            <enumeration value="Female"/>
+        </restriction>
+    </simpleType>
+
 </schema>
