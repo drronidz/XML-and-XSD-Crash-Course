@@ -14,7 +14,22 @@
             <element name="email" type="string"/>
             <element name="gender" type="tns:Gender"/>
             <element name="phone" type="string"/>
+            <element name="payment" type="tns:PaymentType"/>
         </sequence>
+    </complexType>
+
+    <complexType name="PaymentType">
+        <choice>
+            <element name="cash" type="double"/>
+            <element name="insurance" type="tns:Insurance"/>
+        </choice>
+    </complexType>
+
+    <complexType name="Insurance">
+        <all>
+            <element name="provider" type="string"/>
+            <element name="limit" type="int"/>
+        </all>
     </complexType>
 
     <simpleType name="ID">
@@ -35,5 +50,6 @@
             <enumeration value="Female"/>
         </restriction>
     </simpleType>
+
 
 </schema>
