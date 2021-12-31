@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.bharathairlines.com/Reservation"
+        xmlns:tns="http://www.bharathairlines.com/Reservation">
+    <include schemaLocation="Common.xsd"/>
+    <complexType name="passenger">
+        <sequence>
+            <element name="firstName" type="tns:maxLength20"/>
+            <element name="lastName" type="tns:maxLength20"/>
+            <element name="email" type="tns:maxLength20"/>
+            <element name="phone" type="tns:maxLength20"/>
+        </sequence>
+    </complexType>
+    <simpleType name="phone">
+        <restriction base="string">
+            <pattern value="[0-9]{10}"/>
+        </restriction>
+    </simpleType>
+</schema>
