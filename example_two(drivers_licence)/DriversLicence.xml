@@ -7,4 +7,5 @@
     <VehiculeType>Car</VehiculeType>
     <DateOfIssue>11/06/2016</DateOfIssue>
     <ExpirtyDate>11/06/2021</ExpirtyDate>
+    <Photo location="servername/filename"/>
 </Driverlicence>
