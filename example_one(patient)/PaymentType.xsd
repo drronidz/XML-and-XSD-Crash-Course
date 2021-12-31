@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.org/PaymentType"
+        xmlns:tns="http://www.bharatthippireddy.com/Patient"
+        elementFormDefault="qualified">
+    <complexType name="PaymentType">
+        <choice>
+            <element name="cash" type="double"/>
+            <element name="insurance" type="tns:Insurance"/>
+        </choice>
+    </complexType>
+
+    <complexType name="Insurance">
+        <all>
+            <element name="provider" type="string"/>
+            <element name="limit" type="int"/>
+        </all>
+    </complexType>
+</schema>
