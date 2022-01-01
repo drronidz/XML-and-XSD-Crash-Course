@@ -2,12 +2,15 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.eventmanagement.com/event"
         xmlns:tns="http://www.eventmanagement.com/event"
+        xmlns:common="http://www.eventmanagement.com/common"
         elementFormDefault="qualified">
+    <import schemaLocation="Common.xsd"
+            namespace="http://www.eventmanagement.com/common"/>
     <complexType name="participant">
         <sequence>
-            <element name="name" type="string"/>
-            <element name="email" type="string"/>
-            <element name="phone" type="string"/>
+            <element name="name" type="common:stringMax25"/>
+            <element name="email" type="common:email"/>
+            <element name="phone" type="common:phone"/>
         </sequence>
     </complexType>
 </schema>

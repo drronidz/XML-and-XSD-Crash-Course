@@ -2,10 +2,13 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.eventmanagement.com/event"
         xmlns:tns="http://www.eventmanagement.com/event"
+        xmlns:common="http://www.eventmanagement.com/common"
         elementFormDefault="qualified">
+    <import schemaLocation="Common.xsd"
+            namespace="http://www.eventmanagement.com/common"/>
     <complexType name="venue">
         <sequence>
-            <element name="name" type="string"/>
+            <element name="name" type="common:stringMax25"/>
             <element name="street" type="string"/>
             <element name="city" type="string"/>
             <element name="state" type="string"/>

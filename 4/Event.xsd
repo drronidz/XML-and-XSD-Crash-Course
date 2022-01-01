@@ -2,15 +2,18 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://www.eventmanagement.com/event"
         xmlns:tns="http://www.eventmanagement.com/event"
+        xmlns:common="http://www.eventmanagement.com/common"
         elementFormDefault="qualified">
     <include schemaLocation="Organizer.xsd"/>
     <include schemaLocation="Participant.xsd"/>
     <include schemaLocation="Venue.xsd"/>
+    <import  schemaLocation="Common.xsd"
+             namespace="http://www.eventmanagement.com/common"/>
     <element name="event">
         <complexType>
             <sequence>
-                <element name="name" type="string"/>
-                <element name="description" type="string"/>
+                <element name="name" type="common:stringMax25"/>
+                <element name="description" type="common:stringMax200"/>
                 <element name="ticketPrice" type="decimal"/>
                 <element name="startTime" type="dateTime"/>
                 <element name="endTime" type="dateTime"/>
