@@ -12,5 +12,6 @@
             <element name="email" type="common:email"/>
             <element name="phone" type="common:phone"/>
         </sequence>
+        <attribute name="id" type="common:id" use="required"/>
     </complexType>
 </schema>

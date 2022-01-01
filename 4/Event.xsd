@@ -24,6 +24,7 @@
                          minOccurs="3"
                          maxOccurs="unbounded"/>
             </sequence>
+            <attribute name="id" type="common:id" use="required"/>
         </complexType>
     </element>
 </schema>

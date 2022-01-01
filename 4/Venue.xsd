@@ -15,5 +15,6 @@
             <element name="country" type="string"/>
             <element name="zipcode" type="string"/>
         </sequence>
+        <attribute name="id" type="common:id" use="required"/>
     </complexType>
 </schema>
