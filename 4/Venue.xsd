@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.eventmanagement.com/event"
+        xmlns:tns="http://www.eventmanagement.com/event"
+        elementFormDefault="qualified">
+    <complexType name="venue">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="street" type="string"/>
+            <element name="city" type="string"/>
+            <element name="state" type="string"/>
+            <element name="country" type="string"/>
+            <element name="zipcode" type="string"/>
+        </sequence>
+    </complexType>
+</schema>

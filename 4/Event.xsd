@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.eventmanagement.com/event"
+        xmlns:tns="http://www.eventmanagement.com/event"
+        elementFormDefault="qualified">
+    <include schemaLocation="Organizer.xsd"/>
+    <include schemaLocation="Participant.xsd"/>
+    <include schemaLocation="Venue.xsd"/>
+    <element name="event">
+        <complexType>
+            <sequence>
+                <element name="name" type="string"/>
+                <element name="description" type="string"/>
+                <element name="ticketPrice" type="decimal"/>
+                <element name="startTime" type="dateTime"/>
+                <element name="endTime" type="dateTime"/>
+                <element name="organizer" type="tns:organizer"/>
+                <element name="venue" type="tns:venue"/>
+                <element name="participant"
+                         type="tns:participant"
+                         minOccurs="3"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
