@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tns:event
+        id="111111"
+        xmlns:tns="http://www.eventmanagement.com/event"
+        xmlns:tns1="http://www.eventmanagement.com/common"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.eventmanagement.com/event event.xsd"
+>
+  <tns:name>Winter Holidays</tns:name>
+  <tns:description>This is the winter holidays (Sky, Travelling ...)</tns:description>
+  <tns:ticketPrice>1000.00</tns:ticketPrice>
+  <tns:startTime>2008-09-29T01:49:45</tns:startTime>
+  <tns:endTime>2014-09-19T00:18:33</tns:endTime>
+  <tns:organizer id="113344">
+    <tns:name>ABDELHALIMDIAB</tns:name>
+    <tns:email>abdelhalim.diab@univ-constantine2.dz</tns:email>
+    <tns:phone>0779616727</tns:phone>
+  </tns:organizer>
+  <tns:venue id="223344">
+    <tns:name>string</tns:name>
+    <tns:street>string</tns:street>
+    <tns:city>string</tns:city>
+    <tns:state>string</tns:state>
+    <tns:country>string</tns:country>
+    <tns:zipcode>string</tns:zipcode>
+  </tns:venue>
+  <!--3 or more repetitions:-->
+  <tns:participant id="112233">
+    <tns:name>Jane</tns:name>
+    <tns:email>jane@hotmail.com</tns:email>
+    <tns:phone>0775613255</tns:phone>
+  </tns:participant>
+  <tns:participant id="654321">
+    <tns:name>John</tns:name>
+    <tns:email>john.doe@live.com</tns:email>
+    <tns:phone>0775613244</tns:phone>
+  </tns:participant>
+  <tns:participant id="123456">
+    <tns:name>Jakob</tns:name>
+    <tns:email>jakob.doe@live.com</tns:email>
+    <tns:phone>0775112233</tns:phone>
+  </tns:participant>
+</tns:event>

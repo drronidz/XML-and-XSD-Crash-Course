@@ -24,7 +24,8 @@
 
     <simpleType name="phone">
         <restriction base="string">
-            <pattern value="[+](?:[0-9] ?){6,14}[0-9]"/>
+<!--            <pattern value="[+](?:[0-9] ?){6,14}[0-9]"/>-->
+            <pattern value="[0-9]{10}"/>
         </restriction>
     </simpleType>
 
