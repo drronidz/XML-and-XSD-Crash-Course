@@ -1,4 +1,4 @@
-package com.bharath.xmlparsers.dto;
+package com.cleverdeveloper.xmlparsers.dto;
 
 public class Address {
 	
