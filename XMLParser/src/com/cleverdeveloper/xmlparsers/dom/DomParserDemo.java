@@ -7,7 +7,10 @@ Author Name : @ DRRONIDZ
 DATE : 1/2/2022 10:22 PM
 */
 
+import com.cleverdeveloper.xmlparsers.dto.DriversLicense;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -17,10 +20,27 @@ import java.io.IOException;
 
 public class DomParserDemo {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-
         DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+        Document document = documentBuilder.parse(DomParserDemo.class
+                .getClassLoader().getSystemResourceAsStream("com/xml/DriversLicense.xml"));
+        DriversLicense driversLicense = new DriversLicense();
 
-        Document document = documentBuilder.parse(ClassLoader.getSystemResourceAsStream("xml/DriversLicence.xml"));
+        NodeList numberList = document.getElementsByTagName("Number");
+        Node numberItem = numberList.item(0);
+        driversLicense.setNumber(Long.parseLong(numberItem.getTextContent()));
+
+        NodeList firstNameList = document.getElementsByTagName("FirstName");
+        Node firstNameItem = firstNameList.item(0);
+        driversLicense.setFirstName(firstNameItem.getTextContent());
+
+        NodeList lastNameList = document.getElementsByTagName("LastName");
+        Node lastNameItem = lastNameList.item(0);
+        driversLicense.setLastName(lastNameItem.getTextContent());
+
+        System.out.println("Number is : " + driversLicense.getNumber());
+        System.out.println("First name is : " + driversLicense.getFirstName());
+        System.out.println("Last name is : " + driversLicense.getLastName());
     }
 }
