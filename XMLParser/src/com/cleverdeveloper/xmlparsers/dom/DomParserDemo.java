@@ -7,6 +7,7 @@ Author Name : @ DRRONIDZ
 DATE : 1/2/2022 10:22 PM
 */
 
+import com.cleverdeveloper.xmlparsers.dto.Address;
 import com.cleverdeveloper.xmlparsers.dto.DriversLicense;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -48,6 +49,40 @@ public class DomParserDemo {
         driversLicense.setStatus(documentElement.getAttribute("status"));
                                     /*              -  END -              */
 
+        /* Reading the elements Hierarchically */
+                                    /*              - BEGIN -              */
+        NodeList addressList = document.getElementsByTagName("Address");
+        Node addressNode = addressList.item(0);
+        NodeList addressChildNodes = addressNode.getChildNodes();
+        Address address = new Address();
+
+        for (int i = 0; i < addressChildNodes.getLength(); i++) {
+            Node item = addressChildNodes.item(i);
+
+            if (item instanceof Element) {
+                switch (item.getNodeName()) {
+                    case "street":
+                        address.setStreet(item.getTextContent());
+                        break;
+                    case "city":
+                        address.setCity(item.getTextContent());
+                        break;
+                    case "state":
+                        address.setState(item.getTextContent());
+                        break;
+                    case "country":
+                        address.setCountry(item.getTextContent());
+                        break;
+                    case "zipcode":
+                        address.setZipcode(item.getTextContent());
+                        break;
+                }
+            }
+        }
+
+        driversLicense.setAddress(address);
+                                    /*              -  END -              */
+
 
         System.out.println("####################### Displaying Information #######################");
 
@@ -55,5 +90,6 @@ public class DomParserDemo {
         System.out.println("Number is : " + driversLicense.getNumber());
         System.out.println("First name is : " + driversLicense.getFirstName());
         System.out.println("Last name is : " + driversLicense.getLastName());
+        System.out.println(driversLicense.getAddress());
     }
 }
