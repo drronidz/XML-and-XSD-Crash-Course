@@ -20,8 +20,8 @@ public class SAXHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 
-        if (qName.equals("DriversLicence")) {
-            driversLicense = new DriversLicense();
+        if (qName.equals("DriversLicense")) {
+            setDriversLicense(new DriversLicense());
         }
 
 
@@ -31,7 +31,6 @@ public class SAXHandler extends DefaultHandler {
     public void endElement(String uri, String localName, String qName) throws SAXException {
 
         switch (qName) {
-
             case "Number":
                 driversLicense.setNumber(Long.parseLong(content));
                 break;
@@ -47,5 +46,13 @@ public class SAXHandler extends DefaultHandler {
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         content = String.copyValueOf(ch, start, length).trim();
+    }
+
+    public DriversLicense getDriversLicense() {
+        return driversLicense;
+    }
+
+    public void setDriversLicense(DriversLicense driversLicense) {
+        this.driversLicense = driversLicense;
     }
 }
