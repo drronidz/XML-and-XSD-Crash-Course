@@ -22,7 +22,7 @@ public class SAXParserMain {
         SAXHandler handler = new SAXHandler();
         parser.parse(ClassLoader.getSystemResourceAsStream("com/xml/DriversLicense.xml"), handler);
 
-        System.out.println("####################### Displaying Information #######################");
+        System.out.println("####################### Displaying Information ()#######################");
 
         System.out.println("Status is : " + handler.getDriversLicense().getStatus());
         System.out.println("Number is : " + handler.getDriversLicense().getNumber());
