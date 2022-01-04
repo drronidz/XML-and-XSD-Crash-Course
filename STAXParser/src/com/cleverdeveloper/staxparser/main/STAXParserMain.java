@@ -18,7 +18,7 @@ public class STAXParserMain {
     public static void main(String[] args) throws XMLStreamException {
         XMLInputFactory factory = XMLInputFactory.newInstance();
         XMLStreamReader xmlStreamReader = factory.createXMLStreamReader(
-                ClassLoader.getSystemResourceAsStream("com/cleverdeveloper/xml/DriversLicense.xml"));
+                ClassLoader.getSystemResourceAsStream("com/xml/DriversLicense.xml"));
 
         DriversLicense driversLicense = null;
         String content = null;
@@ -28,15 +28,33 @@ public class STAXParserMain {
 
             switch (event) {
                 case XMLStreamConstants.START_ELEMENT:
-                    if(xmlStreamReader.getLocalName().equals("DriverLicence")) {
+                    if (xmlStreamReader.getLocalName().equals("DriversLicense")) {
                         driversLicense = new DriversLicense();
                     }
                     break;
 
                 case XMLStreamConstants.CHARACTERS:
-                    content = xmlStreamReader.getText();
+                    content = xmlStreamReader.getText().trim();
                     break;
+
+                case XMLStreamConstants.END_ELEMENT:
+
+                    switch (xmlStreamReader.getLocalName()) {
+                        case "Number":
+                            driversLicense.setNumber(Long.parseLong(content));
+                            break;
+                        case "FirstName":
+                            driversLicense.setFirstName(content);
+                            break;
+                        case "LastName":
+                            driversLicense.setLastName(content);
+                            break;
+                    }
             }
         }
+        System.out.println(driversLicense.getNumber());
+        System.out.println(driversLicense.getFirstName());
+        System.out.println(driversLicense.getLastName());
+
     }
 }
