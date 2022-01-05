@@ -4,6 +4,7 @@
         <html>
             <body>
                 <h2>Order Details:</h2>
+                <h3><xsl:value-of select="Order/CustomerName"/></h3>
             </body>
         </html>
     </xsl:template>
