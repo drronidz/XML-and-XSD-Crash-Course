@@ -10,6 +10,14 @@
                 <h3>
                     <xsl:value-of select="Order/@id"/>
                 </h3>
+                <table border="1">
+                    <tr bgcolor="blue">
+                        <th>Item Id</th>
+                        <th>Item Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
             </body>
         </html>
     </xsl:template>
