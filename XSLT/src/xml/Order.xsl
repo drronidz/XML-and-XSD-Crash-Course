@@ -17,6 +17,14 @@
                         <th>Price</th>
                         <th>Quantity</th>
                     </tr>
+                    <xsl:for-each select="Order/Item">
+                        <tr>
+                            <td><xsl:value-of select="ItemId"/></td>
+                            <td><xsl:value-of select="ItemName"/></td>
+                            <td><xsl:value-of select="Price"/></td>
+                            <td><xsl:value-of select="Quantity"/></td>
+                        </tr>
+                    </xsl:for-each>
                 </table>
             </body>
         </html>
